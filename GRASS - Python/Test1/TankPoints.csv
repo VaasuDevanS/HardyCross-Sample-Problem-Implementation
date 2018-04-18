@@ -1,0 +1,9 @@
+id,name,type,lat,lon,pipe,litre
+1,Storage,point,417262.4393,1438343.927,S,
+2,RCC,point,417297.3668,1438436.723,out,
+3,Library,point,417357.0567,1438400.638,out,
+4,IRS,point,417197.3999,1438273.45,,
+5,BioTech,point,417274.5548,1438284.047,,
+6,MS,point,417307.5872,1438303.896,in,
+7,Exam Center,point,417189.9141,1438199.95,,
+8,Canteen,point,417266.4,1438399.6,in,

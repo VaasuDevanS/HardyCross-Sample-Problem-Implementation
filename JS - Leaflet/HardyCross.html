@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Hardy Cross Method</title>
+        <link rel="stylesheet" href="lib/leaflet.css"/>
+        <link rel="stylesheet" href="HardyCross.css"/>
+    </head>
+<body>
+    <script type="text/javascript" defer src="lib/leaflet.js"></script>
+    <script type="text/javascript" defer src="lib/jquery.min.js"></script>
+    <script type="text/javascript" defer src="Features.js"></script>
+    <script type="text/javascript" defer src="HardyCross.js"></script>
+    
+    <div id="header" class="styleHeader" style="background-color:#660066;width:100%; height:4%">
+    	<h1> Pipeline Design using Hardy Cross Method </h1>
+    </div>
+    <div id="main" class="row" style="width:100%;height:96%;border:solid">
+        <div id="table" class="column" style="width:20% auto;height:100%;border:solid">
+    	 	<table id="headerTable">
+			  <tr>
+			    <th> Inflow </th>
+			  </tr>
+			  <tr>
+			    <td> &nbsp A : <input id="a_value" style="border:solid blue" value="50" type="text"/></td>
+			  </tr>
+			  <tr>
+			    <td> &nbsp B : <input id="b_value" style="border:solid blue" value="50" type="text"/></td>
+			  </tr>
+			  <tr>
+			    <th> Outflow </th>
+			  </tr>
+			  <tr>
+			    <td> &nbsp C : <input id="c_value" style="border:solid blue" value="25"  type="text"/></td>
+			  </tr>
+			  <tr>
+			    <td> &nbsp D : <input id="d_value" style="border:solid blue" value="75" type="text"/></td>
+			  </tr>
+			  <tr>
+			    <th> Value of "n"</th>
+			  </tr>
+			  <tr>
+			    <td> &nbsp n : <input id="n_value" style="border:solid blue" value="2" type="text"/></td>
+			  </tr>
+			  <tr>
+			    <th> K values</th>
+			  </tr>
+			  <tr>
+			    <td> AB : <input id="ab_value" style="border:solid blue" value="2" type="text"/></td>
+			  </tr>
+			  <tr>
+			    <td> BC : <input id="bc_value" style="border:solid blue" value="4" type="text"/></td>
+			  </tr>
+			  <tr>
+			    <td> CD : <input id="cd_value" style="border:solid blue" value="3" type="text"/></td>
+			  </tr>
+			  <tr>
+			    <td> AD : <input id="ad_value" style="border:solid blue" value="2" type="text"/></td>
+			  </tr>
+			  <tr>
+			    <td> BD : <input id="bd_value" style="border:solid blue" value="1" type="text"/></td>
+			  </tr>
+			  <tr>
+			    <th> Condition to iterate </th>
+			  </tr>
+			  <tr>
+			    <td> <input id="iter_value" value="-0.5" style="border:solid blue;margin: 0 10%;" type="text" /></td>
+			  </tr>
+			  <tr>
+			  	<td> <br> <button class="button" id="submit">Generate</button></td>
+			  </tr>
+			 </table>
+		 </div>
+         <div id="map" class="column" style="background-color:white;width:45%;height:100%;border:solid"></div>
+         <div id="outputValues" class="column" style="padding:50px;width:27%;height:100%">
+            <table id="headerTable">
+			  <tr>
+			    <th> Del values </th>
+			  </tr>
+			  <tr>
+			    <td> <textarea id="del" type="text" style="width:130%;height:140;border:solid blue"></textarea> </td>
+			  </tr>
+			  <tr>
+			    <th> Qa Values </th>
+			  </tr>
+			  <tr>
+			    <td> <textarea id="Qa" type="text" style="width:130%;height:140;border:solid blue"></textarea> </td>
+			  </tr>
+			  <tr>
+			  	<td> <br> <button class="clear" id="clear"> Clear </button></td>
+			  </tr>
+         </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+# timestamp: 2018-02-09 23:48
+# location: Chennai
+# mapset: AU
+# page orientation: Portrait
+# g.region n=1438440.75412 s=1438202.91329 e=417381.101897 w=417176.666266 rows=238 cols=221 
+
+maploc 0.489 1.423  7.287 8.477
+border y
+    width 1
+    color black
+    end
+
+paper a4
+    left 0.5
+    right 0.5
+    bottom 1.0
+    top 1.0
+    end
+
+scalebar f
+    where 6.246 9.507
+    length 68.0
+    units auto
+    height 0.1
+    segment 4
+    numbers 1
+    fontsize 10
+    background y
+    end
+eps 417369 1438455
+# north arrow
+    epsfile $GISBASE/etc/paint/decorations/n_arrow1_fancy.eps
+    scale 0.5
+    end
+text 417277 1438466 PIPE DESIGN
+    font Times-Roman
+    fontsize 27
+    color black
+    hcolor none
+    border none
+    background none
+    ref center center
+    end
+vlegend
+    where 6.331 10.517
+    font Helvetica
+    fontsize 10
+    width 0.4
+    cols 1
+    border none
+    end
+mapinfo
+    where 0.680 10.304
+    font Helvetica
+    fontsize 10
+    color black
+    background none
+    border none
+    end
+
+vlines Roads@AU
+    type line or boundary
+    masked n
+    color 0:0:0
+    width 1
+    style solid
+    linecap butt
+    label Roads
+    lpos 1
+    end
+vlines myNet@AU
+    type line or boundary
+    label Layout
+    end
+vpoints TankPoints@AU
+    type point or centroid
+    layer 1
+    masked n
+    color black
+    width 1.0
+    fcolor none
+    symbol basic/triangle
+    sizecolumn size
+    label TankPoints
+    lpos 2
+    end
+vareas Buildings@AU
+    layer 1
+    masked n
+    color black
+    rgbcolumn color
+    width 1.0
+    fcolor 255:0:46
+    label Buildings
+    lpos 3
+    end
+labels Line
+    font Times-Roman
+    fontsize 1
+    end
+labels lbuildings
+    font Times-Roman
+    fontsize 5
+    end
+labels TankPoints
+    font Times-Roman
+    fontsize 5
+    end
+end

@@ -1,0 +1,112 @@
+east: 417190.052944
+north: 1438288.272677
+xoffset: 0
+yoffset: 0
+ref: center
+font: standard
+color: black
+size: 5
+width: 1
+hcolor: none
+hwidth: 0
+background: none
+border: none
+opaque: yes
+text: IRS
+
+east: 417188.593863
+north: 1438227.658592
+xoffset: 0
+yoffset: 0
+ref: center
+font: standard
+color: black
+size: 5
+width: 1
+hcolor: none
+hwidth: 0
+background: none
+border: none
+opaque: yes
+text: Examination Center
+
+east: 417249.257467
+north: 1438278.668060
+xoffset: 0
+yoffset: 0
+ref: center
+font: standard
+color: black
+size: 5
+width: 1
+hcolor: none
+hwidth: 0
+background: none
+border: none
+opaque: yes
+text: Department of Biotechnology
+
+east: 417277.354880
+north: 1438312.128780
+xoffset: 0
+yoffset: 0
+ref: center
+font: standard
+color: black
+size: 5
+width: 1
+hcolor: none
+hwidth: 0
+background: none
+border: none
+opaque: yes
+text: Department of MediaScience
+
+east: 417351.003620
+north: 1438417.251784
+xoffset: 0
+yoffset: 0
+ref: center
+font: standard
+color: black
+size: 5
+width: 1
+hcolor: none
+hwidth: 0
+background: none
+border: none
+opaque: yes
+text: University Library
+
+east: 417232.655170
+north: 1438407.916835
+xoffset: 0
+yoffset: 0
+ref: center
+font: standard
+color: black
+size: 5
+width: 1
+hcolor: none
+hwidth: 0
+background: none
+border: none
+opaque: yes
+text: CEG Canteen
+
+east: 417286.972216
+north: 1438429.138159
+xoffset: 0
+yoffset: 0
+ref: center
+font: standard
+color: black
+size: 5
+width: 1
+hcolor: none
+hwidth: 0
+background: none
+border: none
+opaque: yes
+text: RCC
+
