@@ -1,0 +1,692 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 0 0 595 841                                                    
+%%Title: Mapset = AU
+%%EndComments
+
+%%BeginProlog
+/level 2 def
+
+% make definition operators
+/BD {bind def} bind def
+/XD {exch def} BD
+
+% make increment and decrement operators
+/IN {1 add} BD
+/DE {1 sub} BD
+
+% exch sub operator
+/XS {exch sub} BD
+
+% newpath operator
+/NP {newpath} BD
+
+% newpath moveto operator
+/NM {newpath moveto} BD
+
+% moveto operator
+/M {moveto} BD
+
+% closepath operator
+/CP {closepath} BD
+
+% closepath fill operator
+/CF {closepath fill} BD
+
+% lineto operator
+/LN {lineto} BD
+
+% divide by 2
+/D2 {2 div} BD
+
+% draw a line segment
+% assumes x2 y2 x1 y1 on top of stack
+/L {moveto LN stroke} BD
+
+/ML {moveto LN } BD
+
+% adds a relative vector to the path
+% assumes x2 y2 on top of stack
+/V {rlineto} BD
+
+% construct rectangular box path
+% assumes l b r t on top of stack
+/B {4 1 roll 2 copy 5 index 5 index 8 1 roll
+NM LN LN LN closepath} BD
+
+% set line width
+% assumes line width is on top of stack
+/W {setlinewidth} BD
+
+% stringwidth operator
+/SW {stringwidth} BD
+
+% translate operator
+/TR {translate} BD
+
+% set current color
+% assumes R G B values (0.0 to 1.0) on top of stack
+/C {setrgbcolor} BD
+
+% set color to black, line width to 1
+/BW {0 0 0 C 1 W} BD
+
+% moveto and show
+% assumes text x y on top of stack
+/MS {moveto show} BD
+
+% fill interior of current path with current color
+/F {gsave fill grestore} BD
+
+% draw current path
+/D {stroke} BD
+
+% set font name
+% assumes font name is on top of stack
+/FN {/fn exch cvn def} BD
+
+% ISO-Latin1 fonts
+/isofonts 100 dict def
+
+% set font
+% assumes size is on top of stack
+/SF {isofonts fn known {} {
+fn dup length string cvs
+dup length 4 add string 1 index 1 index copy pop
+exch length 1 index exch (-ISO) putinterval cvn
+fn findfont dup length dict copy
+dup /FID undef
+dup /FontName 3 index put
+dup /Encoding ISOLatin1Encoding put
+1 index exch definefont pop
+isofonts fn 3 -1 roll put
+} ifelse
+isofonts fn get findfont exch scalefont setfont} BD
+
+% initialize font to Helvetica, size = 10
+(Helvetica) FN 10 SF
+
+% initialize the text box path
+/ZB {0 0 NM gsave}  BD
+
+% get the path of the text box
+/PB {dup false charpath flattenpath pathbbox
+/bt exch mg add def
+/br exch mg add def
+/bb exch mg sub def
+/bl exch mg sub def} BD 
+
+% set the text box path
+/TB {bl bb br bt B} BD
+
+% text in box
+/TIB {0 0 MS grestore} BD
+
+% procs for text box path
+/LTX {mg add} BD
+/RTX {mg add br bl sub sub} BD
+/CTX {mg add br bl sub D2 sub} BD
+/UTY {mg add bt bb sub sub} BD
+/LTY {mg add} BD
+/CTY {mg add bt bb sub D2 sub} BD
+
+% proc used for highlight color
+% (temporarily change miter limit to avoid the M-problem)
+% /HC {0 0 NM dup false charpath gsave 2 setmiterlimit stroke grestore} BD
+% proc used for highlight color
+% (temporarily change line join style so highlight is rounded)
+/HC {0 0 NM dup false charpath gsave 1 setlinejoin stroke grestore} BD
+
+% proc used before included EPS file
+/BeginEPSF {
+  /inc_state save def
+  /dict_count countdictstack def
+  /op_count count 1 sub def
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin    
+  10 setmiterlimit [ ] 0 setdash newpath
+  /language level where
+  {pop languagelevel
+  1 ne
+    {false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+% proc used to restore PS state after included EPS file
+/EndEPSF {
+  count op_count sub {pop} repeat
+  countdictstack dict_count sub {end} repeat
+  inc_state restore
+} bind def
+
+%%EndProlog
+
+<< /PageSize [  595 841 ] >> setpagedevice
+gsave 37.0 131.6 558.3 738.4 B clip newpath
+1 setlinejoin
+NP
+67.2 405.8 M  94.0 402.4 LN 
+92.0 387.1 LN  98.3 386.3 LN  102.3 417.3 LN 
+142.4 412.3 LN  140.4 397.1 LN  180.9 392.0 LN 
+176.6 358.1 LN  152.4 361.1 LN  153.1 366.7 LN 
+132.1 369.3 LN  132.9 375.2 LN  111.7 377.8 LN 
+111.1 373.2 LN  109.8 362.5 LN  93.3 364.6 LN 
+94.7 375.5 LN  95.2 379.3 LN  84.6 380.6 LN 
+79.4 340.2 LN  87.0 339.2 LN  86.0 331.6 LN 
+78.5 332.5 LN  74.5 301.5 LN  147.4 292.4 LN 
+144.6 269.8 LN  79.5 278.0 LN  77.9 264.9 LN 
+68.8 266.1 LN  70.5 279.2 LN  51.4 281.6 LN 
+67.2 405.8 LN  CP
+1.000 0.000 0.000 C
+F
+1.00000000 W
+0.000 0.000 0.000 C
+stroke
+NP
+52.9 254.4 M  101.1 246.5 LN 
+81.9 130.6 LN  37.9 137.8 LN  47.4 194.9 LN 
+36.0 196.8 LN  41.0 227.0 LN  48.2 225.8 LN 
+52.9 254.4 LN  CP
+0.000 1.000 0.000 C
+F
+1.00000000 W
+0.000 0.000 0.000 C
+stroke
+NP
+215.1 326.3 M  256.2 320.9 LN 
+258.4 337.6 LN  219.9 342.6 LN  223.9 373.2 LN 
+301.4 363.1 LN  299.6 349.4 LN  281.2 351.8 LN 
+278.2 329.8 LN  262.7 331.8 LN  261.9 325.5 LN 
+276.2 323.6 LN  268.3 263.8 LN  207.9 271.7 LN 
+215.1 326.3 LN  CP
+1.000 0.502 0.000 C
+F
+1.00000000 W
+0.000 0.000 0.000 C
+stroke
+NP
+231.2 438.8 M  256.2 436.6 LN 
+255.6 429.9 LN  265.8 429.0 LN  264.8 418.2 LN 
+272.9 417.5 LN  274.0 429.2 LN  284.3 428.3 LN 
+283.3 416.6 LN  327.3 412.7 LN  328.8 429.6 LN 
+362.8 426.6 LN  359.0 383.2 LN  227.3 394.8 LN 
+231.2 438.8 LN  CP
+0.502 0.000 1.000 C
+F
+1.00000000 W
+0.000 0.000 0.000 C
+stroke
+NP
+416.4 726.5 M  460.3 720.5 LN 
+464.8 710.1 LN  501.2 706.3 LN  505.0 715.1 LN 
+559.3 708.3 LN  548.7 638.8 LN  485.4 647.9 LN 
+483.9 632.3 LN  464.5 633.9 LN  466.0 647.9 LN 
+407.2 656.2 LN  416.4 726.5 LN  CP
+1.000 1.000 0.000 C
+F
+1.00000000 W
+0.000 0.000 0.000 C
+stroke
+NP
+111.4 708.3 M  167.5 698.8 LN 
+261.1 682.8 LN  247.8 602.0 LN  96.3 629.3 LN 
+111.4 708.3 LN  CP
+0.000 0.000 1.000 C
+F
+1.00000000 W
+0.000 0.000 0.000 C
+stroke
+NP
+295.8 739.4 M  335.3 733.7 LN 
+333.4 722.4 LN  350.9 719.5 LN  347.6 695.0 LN 
+332.6 696.6 LN  329.9 680.6 LN  287.5 688.4 LN 
+295.8 739.4 LN  CP
+0.502 0.502 0.502 C
+F
+1.00000000 W
+0.000 0.000 0.000 C
+stroke
+
+0 setlinejoin
+[] 0 setdash
+[] 0 setdash
+1.00000000 W
+0.000 0.000 0.000 C
+0 setlinecap
+[] 0 setdash
+1 setlinejoin
+265.9 633.9 NM 345.0 729.1 LN D
+345.0 729.1 NM 497.7 636.8 LN D
+497.7 636.8 NM 371.1 389.1 LN
+D
+371.1 389.1 NM 265.9 633.9 LN D
+345.0 729.1 NM 371.1 389.1 LN D
+
+0 setlinejoin
+[] 0 setdash
+[] 0 setdash
+1.00000000 W
+0.000 0.000 0.000 C
+0 setlinecap
+[] 0 setdash
+1 setlinejoin
+4.1 278.1 NM 43.8 272.2 LN 198.5 249.4 LN 433.9 214.7 LN
+D
+148.5 414.9 NM 169.1 404.2 LN 202.6 393.8 LN 210.7 385.9 LN
+206.5 339.6 LN 203.9 310.2 LN 198.5 249.4 LN
+D
+-32.2 10.7 NM -8.2 187.6 M 4.1 278.1 M 39.4 509.5 LN
+68.2 711.4 LN 73.9 750.7 LN 83.6 816.3 M
+D
+158.8 504.6 NM 151.2 434.3 LN 148.5 414.9 LN D
+39.4 509.5 NM 158.8 504.6 LN
+229.6 503.7 LN D
+231.5 507.4 NM 238.3 514.8 LN 246.6 519.3 LN
+256.6 521.0 LN 263.1 520.2 LN 276.2 513.2 LN
+282.7 504.2 LN 285.3 494.4 LN 285.0 487.4 LN
+281.7 477.9 LN 278.0 472.7 LN 270.4 466.6 LN
+258.5 463.1 LN 244.9 465.3 LN 236.4 470.8 LN
+231.3 476.9 LN 227.1 490.0 LN 229.6 503.7 LN
+231.5 507.4 LN D
+68.2 711.4 NM 43.4 713.4 LN -134.9 738.6 LN
+D
+-286.9 77.6 NM -248.1 96.0 M -190.7 130.5 M -154.2 128.2 M
+-63.6 194.5 M -8.2 187.6 M D
+-63.6 194.5 NM -111.8 202.9 M
+-159.9 211.1 M -263.8 228.4 M D
+73.9 750.7 NM 171.5 750.4 M
+680.8 748.6 M 701.7 747.8 M D
+171.5 750.4 NM 167.0 725.0 LN
+162.5 708.0 LN 160.5 701.3 LN D
+
+0 setlinejoin
+[] 0 setdash
+(Helvetica) FN
+(Times-Roman) FN
+10 SF
+12 SF
+/mg 0.00 def
+ZB (25) PB
+305.40  681.50 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (37.5) PB
+421.40  682.90 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (12.5) PB
+434.40  512.90 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (25) PB
+318.50  511.50 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (37.5) PB
+358.00  559.10 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB (Times-Roman) FN
+10 SF
+12 SF
+/mg 2.90 def
+ZB (IRS) PB
+70.30  349.10 translate 0.00 rotate  0 CTX 0 CTY TR TB
+0.000 0.000 0.000 C
+TIB 12 SF
+/mg 2.90 def
+ZB (Examination Center) PB
+66.50  194.00 translate 0.00 rotate  0 CTX 0 CTY TR TB
+0.000 0.000 0.000 C
+TIB 12 SF
+/mg 2.90 def
+ZB (Department of Biotechnology) PB
+221.80  324.50 translate 0.00 rotate  0 CTX 0 CTY TR TB
+0.000 0.000 0.000 C
+TIB 12 SF
+/mg 2.90 def
+ZB (Department of MediaScience) PB
+293.70  410.20 translate 0.00 rotate  0 CTX 0 CTY TR TB
+0.000 0.000 0.000 C
+TIB 12 SF
+/mg 2.90 def
+ZB (University Library) PB
+482.30  679.30 translate 0.00 rotate  0 CTX 0 CTY TR TB
+0.000 0.000 0.000 C
+TIB 12 SF
+/mg 2.90 def
+ZB (CEG Canteen) PB
+179.30  655.40 translate 0.00 rotate  0 CTX 0 CTY TR TB
+0.000 0.000 0.000 C
+TIB 12 SF
+/mg 2.90 def
+ZB (RCC) PB
+318.40  709.70 translate 0.00 rotate  0 CTX 0 CTY TR TB
+0.000 0.000 0.000 C
+TIB (Times-Roman) FN
+10 SF
+12 SF
+/mg 0.00 def
+ZB (Canteen) PB
+265.90  633.90 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (RCC) PB
+345.00  729.10 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (Library) PB
+497.70  636.80 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (IRS) PB
+78.90  416.20 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (BioTech) PB
+279.30  259.60 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (MS) PB
+371.10  389.10 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (Center) PB
+33.50  181.40 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB 12 SF
+/mg 0.00 def
+ZB (Storage) PB
+255.60  491.60 translate 0.00 rotate  0 CTX 0 CTY TR TB
+1.000 0.000 0.000 C
+TIB grestore 
+/SITESYMBOL2 {
+NP
+0.0000 -0.3125 M
+0.5413 -0.3125 LN
+0.0000 0.6250 LN
+-0.5413 -0.3125 LN
+CP
+0.000 0.000 0.000 C
+D
+} def
+gsave
+265.90000 633.90000 translate
+10.00000 10.00000 scale
+0.00000 rotate
+0.10000000 W
+SITESYMBOL2
+grestore
+gsave
+345.00000 729.10000 translate
+10.00000 10.00000 scale
+0.00000 rotate
+0.10000000 W
+SITESYMBOL2
+grestore
+gsave
+497.70000 636.80000 translate
+10.00000 10.00000 scale
+0.00000 rotate
+0.10000000 W
+SITESYMBOL2
+grestore
+gsave
+78.90000 416.20000 translate
+10.00000 10.00000 scale
+0.00000 rotate
+0.10000000 W
+SITESYMBOL2
+grestore
+gsave
+279.30000 259.60000 translate
+10.00000 10.00000 scale
+0.00000 rotate
+0.10000000 W
+SITESYMBOL2
+grestore
+gsave
+371.10000 389.10000 translate
+10.00000 10.00000 scale
+0.00000 rotate
+0.10000000 W
+SITESYMBOL2
+grestore
+gsave
+255.60000 491.60000 translate
+20.00000 20.00000 scale
+0.00000 rotate
+0.05000000 W
+SITESYMBOL2
+grestore
+
+[] 0 setdash
+
+BeginEPSF
+509.30000 750.90000 translate
+0.00000 rotate
+0.50000 0.50000 scale
+%BeginDocument: /usr/lib/grass74/etc/paint/decorations/n_arrow1_fancy.eps
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 0 0 76 100
+%%HiResBoundingBox: 0.000000 0.000000 75.355078 99.013281
+%%Creator: GPL Ghostscript 871 (epswrite)
+%%CreationDate: 2012/02/20 11:23:18
+%%DocumentData: Clean7Bit
+%%LanguageLevel: 2
+%%EndComments
+%%BeginProlog
+% This copyright applies to everything between here and the %%EndProlog:
+% Copyright (C) 2010 Artifex Software, Inc.  All rights reserved.
+%%BeginResource: procset GS_epswrite_2_0_1001 1.001 0
+/GS_epswrite_2_0_1001 80 dict dup begin
+/PageSize 2 array def/setpagesize{ PageSize aload pop 3 index eq exch
+4 index eq and{ pop pop pop}{ PageSize dup  1
+5 -1 roll put 0 4 -1 roll put dup null eq {false} {dup where} ifelse{ exch get exec}
+{ pop/setpagedevice where
+{ pop 1 dict dup /PageSize PageSize put setpagedevice}
+{ /setpage where{ pop PageSize aload pop pageparams 3 {exch pop} repeat
+setpage}if}ifelse}ifelse}ifelse} bind def
+/!{bind def}bind def/#{load def}!/N/counttomark #
+/rG{3{3 -1 roll 255 div}repeat setrgbcolor}!/G{255 div setgray}!/K{0 G}!
+/r6{dup 3 -1 roll rG}!/r5{dup 3 1 roll rG}!/r3{dup rG}!
+/w/setlinewidth #/J/setlinecap #
+/j/setlinejoin #/M/setmiterlimit #/d/setdash #/i/setflat #
+/m/moveto #/l/lineto #/c/rcurveto #
+/p{N 2 idiv{N -2 roll rlineto}repeat}!
+/P{N 0 gt{N -2 roll moveto p}if}!
+/h{p closepath}!/H{P closepath}!
+/lx{0 rlineto}!/ly{0 exch rlineto}!/v{0 0 6 2 roll c}!/y{2 copy c}!
+/re{4 -2 roll m exch dup lx exch ly neg lx h}!
+/^{3 index neg 3 index neg}!
+/f{P fill}!/f*{P eofill}!/s{H stroke}!/S{P stroke}!
+/q/gsave #/Q/grestore #/rf{re fill}!
+/Y{P clip newpath}!/Y*{P eoclip newpath}!/rY{re Y}!
+/|={pop exch 4 1 roll 1 array astore cvx 3 array astore cvx exch 1 index def exec}!
+/|{exch string readstring |=}!
+/+{dup type/nametype eq{2 index 7 add -3 bitshift 2 index mul}if}!
+/@/currentfile #/${+ @ |}!
+/B{{2 copy string{readstring pop}aload pop 4 array astore cvx
+3 1 roll}repeat pop pop true}!
+/Ix{[1 0 0 1 11 -2 roll exch neg exch neg]exch}!
+/,{true exch Ix imagemask}!/If{false exch Ix imagemask}!/I{exch Ix image}!
+/Ic{exch Ix false 3 colorimage}!
+/F{/Columns counttomark 3 add -2 roll/Rows exch/K -1/BlackIs1 true>>
+/CCITTFaxDecode filter}!/FX{<</EndOfBlock false F}!
+/X{/ASCII85Decode filter}!/@X{@ X}!/&2{2 index 2 index}!
+/@F{@ &2<<F}!/@C{@X &2 FX}!
+/$X{+ @X |}!/&4{4 index 4 index}!/$F{+ @ &4<<F |}!/$C{+ @X &4 FX |}!
+/IC{3 1 roll 10 dict begin 1{/ImageType/Interpolate/Decode/DataSource
+/ImageMatrix/BitsPerComponent/Height/Width}{exch def}forall
+currentdict end image}!
+/~{@ read {pop} if}!
+end def
+%%EndResource
+/pagesave null def
+%%EndProlog
+%%Page: 1 1
+%%BeginPageSetup
+GS_epswrite_2_0_1001 begin
+/pagesave save store 197 dict begin
+0.1 0.1 scale
+%%EndPageSetup
+gsave mark
+Q q
+0 0 250000 250000 re
+Y
+K
+379.18 219.06 -7.23 473.12 167.35 -628.43 -160.12 155.31 f
+255 G
+379.18 219.06 -7.23 473.12 -148.04 -633.24 155.27 160.12 f
+7.5 w
+K
+379.18 219.06 -155.27 -160.12 148.04 633.25 167.35 -628.44 -160.12 155.31 H
+379.18 219.06 S
+17.5 w
+744.8 376.8 m
+0 -203.29 -164.76 -368.05 -368 -368.05 c
+-203.28 0 -368.05 164.76 -368.05 368.05 c
+0 203.24 164.77 368 368.05 368 c
+203.24 0 368 -164.76 368 -368 c
+h
+744.8 376.8 S
+0.2 i
+428.03 990.14 -17.99 -0.28 1.92 -125.09 -81.93 123.86 -21.21 -0.33 2.36 -153.44 18 0.28 -1.92 124.66 
+81.07 -123.44 22.05 0.34 H
+f
+cleartomark end end pagesave restore
+ showpage
+%%PageTrailer
+%%Trailer
+%%Pages: 1
+%EndDocument
+EndEPSF
+(Helvetica) FN
+(Times-Roman) FN
+27 SF
+/mg 0.00 def
+ZB (PIPE DESIGN) PB
+292.80  804.10 translate 0.00 rotate  0 CTX 0 CTY TR TB
+0.000 0.000 0.000 C
+TIB (Helvetica) FN 10.0 SF
+49.0 (REGION:   ) SW pop add /sx XD
+0.000 0.000 0.000 C
+(SCALE:)
+49.0 90.0 MS
+(1 : 1107) sx 90.0 MS
+(REGION:   )
+49.0 65.0 MS
+(417176.66626587    ) sx 65.0 MS
+currentpoint pop (1438440.75412488) SW pop D2 sub /xo XD
+(    417381.10189657) show
+(1438440.75412488) xo 75.0 MS
+(1438202.9132905) xo 55.0 MS
+(Helvetica) FN 10.0 SF
+/a [
+( Roads)
+( TankPoints)
+( Buildings)
+( Layout)
+] def
+/mg 4.0 def
+/w 0 def 0 1 a length 1 sub { /i XD
+a i get SW pop /t XD t w gt {/w t def} if } for
+/w w 455.8 add mg add 28.8 add def
+1 1 1 C 451.8 20.7 w 84.7 B fill 
+0.000 0.000 0.000 C
+1.00000000 W
+[] 0 setdash
+484.6 73.2 455.8 73.2 L
+0.000 0.000 0.000 C
+a 0 get 484.6 69.7 MS
+gsave
+470.23200 59.67200 translate
+6.00000 6.00000 scale
+0.00000 rotate
+0.16666667 W
+SITESYMBOL2
+grestore
+0.000 0.000 0.000 C
+a 1 get 484.6 54.7 MS
+1.000 0.000 0.180 C
+461.6 38.7 17.3 8.0 rectfill
+1.00000000 W
+0.000 0.000 0.000 C
+[] 0 setdash
+461.6 38.7 17.3 8.0 rectstroke
+0.000 0.000 0.000 C
+a 2 get 484.6 39.7 MS
+0.000 0.000 0.000 C
+1.00000000 W
+[] 0 setdash
+484.6 28.2 455.8 28.2 L
+0.000 0.000 0.000 C
+a 3 get 484.6 24.7 MS
+[] 0 setdash
+/mg 2 def
+(Helvetica) FN
+10 SF
+1.00000000 W
+0.0 0.0 0.0 C
+363.1 157.4 406.7 164.6 B
+F 0.0 0.0 0.0 C
+D
+ZB (0) PB
+363.15  166.59 translate 0.00 rotate  0 CTX 0 LTY TR TB
+1.000 1.000 1.000 C
+F 0.000 0.000 0.000 C
+TIB
+1.0 1.0 1.0 C
+406.7 157.4 450.2 164.6 B
+F 0.0 0.0 0.0 C
+D
+ZB (17) PB
+406.68  166.59 translate 0.00 rotate  0 CTX 0 LTY TR TB
+1.000 1.000 1.000 C
+F 0.000 0.000 0.000 C
+TIB
+0.0 0.0 0.0 C
+450.2 157.4 493.7 164.6 B
+F 0.0 0.0 0.0 C
+D
+ZB (34) PB
+450.21  166.59 translate 0.00 rotate  0 CTX 0 LTY TR TB
+1.000 1.000 1.000 C
+F 0.000 0.000 0.000 C
+TIB
+1.0 1.0 1.0 C
+493.7 157.4 537.3 164.6 B
+F 0.0 0.0 0.0 C
+D
+ZB (51) PB
+493.74  166.59 translate 0.00 rotate  0 CTX 0 LTY TR TB
+1.000 1.000 1.000 C
+F 0.000 0.000 0.000 C
+TIB
+ZB (68) PB
+537.27  166.59 translate 0.00 rotate  0 CTX 0 LTY TR TB
+1.000 1.000 1.000 C
+F 0.000 0.000 0.000 C
+TIB
+ZB (meters) PB
+449.71  151.99 translate 0.00 rotate  0 CTX 0 UTY TR TB
+1.000 1.000 1.000 C
+F 0.000 0.000 0.000 C
+TIB
+0.000 0.000 0.000 C
+1.00000000 W
+36.5 131.1 558.8 738.9 B D
+showpage
+%%Trailer
+%%EOF
